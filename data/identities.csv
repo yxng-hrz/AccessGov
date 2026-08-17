@@ -1,0 +1,13 @@
+employee_id,email,display_name,department,job_title,manager_email,employment_status,identity_type,owner_email,account_enabled,last_login_at
+E001,alice.martin@demo.local,Alice Martin,Engineering,Platform Engineer,marc.lead@demo.local,active,human,,true,2026-08-15T08:30:00+00:00
+E002,bob.dupont@demo.local,Bob Dupont,Finance,Finance Admin,sophie.cfo@demo.local,terminated,human,,true,2026-08-10T09:00:00+00:00
+E003,carol.bernard@demo.local,Carol Bernard,Sales,Account Executive,,active,human,,true,2026-03-01T10:15:00+00:00
+E004,david.robert@demo.local,David Robert,Finance,Accountant,sophie.cfo@demo.local,active,human,,true,2026-08-14T07:45:00+00:00
+E005,eve.leroy@demo.local,Eve Leroy,Security,Security Engineer,lea.ciso@demo.local,active,human,,true,2026-08-16T18:00:00+00:00
+E006,frank.moreau@demo.local,Frank Moreau,IT,System Administrator,paul.it@demo.local,active,human,,true,2026-08-16T16:30:00+00:00
+E007,grace.simon@demo.local,Grace Simon,HR,HR Specialist,nina.hr@demo.local,active,human,,true,2026-08-11T11:30:00+00:00
+E008,henry.laurent@demo.local,Henry Laurent,Procurement,Buyer,olivia.proc@demo.local,active,human,,true,2026-07-29T12:00:00+00:00
+E009,ines.michel@demo.local,Ines Michel,Data,Data Analyst,quentin.data@demo.local,active,human,,true,2026-08-15T15:10:00+00:00
+E010,jules.garcia@demo.local,Jules Garcia,Support,Support Lead,rachel.support@demo.local,leave,human,,true,2026-04-01T07:00:00+00:00
+S001,svc-backup@demo.local,Backup Service,IT,Service Account,,active,service,,true,2026-01-05T03:00:00+00:00
+S002,svc-ci@demo.local,CI Service,Engineering,Service Account,,active,service,platform@demo.local,true,2026-08-17T05:30:00+00:00

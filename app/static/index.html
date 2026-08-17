@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AccessGov — IAM Access Review Platform</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <div>
+      <p class="eyebrow">IDENTITY GOVERNANCE / ACCESS REVIEW</p>
+      <h1>AccessGov</h1>
+      <p class="subtitle">Turn access data into review decisions, audit evidence and governance metrics.</p>
+    </div>
+    <div class="header-actions">
+      <a class="button secondary" href="/docs">API docs</a>
+      <button class="button" id="refresh">Refresh</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="score-card">
+      <div>
+        <span class="label">IAM Governance Score</span>
+        <strong id="governance-score">--</strong>
+        <span>/ 100</span>
+      </div>
+      <p id="score-message">Loading posture…</p>
+    </section>
+
+    <section class="grid metrics" id="metrics"></section>
+
+    <section class="two-column">
+      <article class="panel">
+        <div class="panel-title">
+          <div>
+            <p class="eyebrow">RISK SIGNALS</p>
+            <h2>Priority anomalies</h2>
+          </div>
+          <span class="pill" id="anomaly-count">0</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Severity</th><th>Identity</th><th>Issue</th><th>Application</th></tr></thead>
+            <tbody id="anomalies"></tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-title">
+          <div>
+            <p class="eyebrow">CERTIFICATION</p>
+            <h2>Access review campaign</h2>
+          </div>
+          <span class="pill" id="campaign-status">--</span>
+        </div>
+        <div id="campaign" class="campaign"></div>
+        <div class="review-list" id="review-items"></div>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title">
+        <div>
+          <p class="eyebrow">EVIDENCE</p>
+          <h2>Recent audit events</h2>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Event</th><th>Actor</th><th>Entity</th><th>Details</th></tr></thead>
+          <tbody id="audit-events"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>AccessGov is an educational portfolio project. Demo data is synthetic.</footer>
+  <script src="/static/app.js"></script>
+</body>
+</html>
