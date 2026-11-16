@@ -1,0 +1,11 @@
+name,owner_email,criticality,contains_sensitive_data,description
+Finance ERP,finance-owner@demo.local,5,true,Payments invoices and financial records
+Customer CRM,salesops@demo.local,4,true,Customer relationship data
+GitHub Enterprise,platform@demo.local,4,false,Source code and engineering collaboration
+Cloud Console,cloud@demo.local,5,true,Production cloud administration
+HRIS,hr@demo.local,5,true,Employee and payroll information
+Support Portal,support@demo.local,3,true,Customer support operations
+BI Platform,data@demo.local,3,true,Analytics and reporting
+VPN,infra@demo.local,4,false,Remote access gateway
+Vendor Portal,procurement@demo.local,4,true,Third-party onboarding and supplier payments
+Security Console,security@demo.local,5,true,Security monitoring and administration

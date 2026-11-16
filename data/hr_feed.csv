@@ -1,0 +1,8 @@
+employee_id,employment_status,department,job_title,manager_email
+E001,active,Engineering,Platform Engineer,marc.lead@demo.local
+E002,terminated,Finance,Finance Admin,sophie.cfo@demo.local
+E003,active,Sales,Account Executive,
+E004,active,Finance,Accountant,sophie.cfo@demo.local
+E006,active,IT,System Administrator,paul.it@demo.local
+E009,active,Data,Data Analyst,quentin.data@demo.local
+E011,active,Engineering,Junior Developer,marc.lead@demo.local

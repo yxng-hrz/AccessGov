@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AccessGov — Identity Governance Cockpit</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <div>
+      <p class="eyebrow">IDENTITY GOVERNANCE · CISO COCKPIT</p>
+      <h1>AccessGov</h1>
+      <p class="subtitle">From access data to accountable decisions: Joiner-Mover-Leaver control, certification campaigns, time-bound risk acceptance and audit-grade evidence mapped to ISO 27001, NIS2 and DORA.</p>
+    </div>
+    <div class="header-actions">
+      <input id="api-key" type="password" placeholder="API key (optional)" aria-label="API key" />
+      <a class="button secondary" href="/docs">API docs</a>
+      <a class="button secondary" id="report-link" href="/api/v1/reports/executive" target="_blank" rel="noopener">COMEX report</a>
+      <button class="button" id="refresh">Refresh</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="score-card">
+      <div>
+        <span class="label">IAM Governance Score</span>
+        <div><strong id="governance-score">--</strong><span>/ 100</span> <span class="rating" id="rating"></span></div>
+        <p id="score-message">Loading posture…</p>
+      </div>
+      <div class="trend">
+        <span class="label">Trend</span>
+        <svg id="sparkline" viewBox="0 0 320 90" role="img" aria-label="Governance score trend"></svg>
+        <div id="trend-labels" class="trend-labels"></div>
+      </div>
+    </section>
+
+    <section class="grid metrics" id="metrics"></section>
+
+    <section class="two-column">
+      <article class="panel">
+        <div class="panel-title">
+          <div><p class="eyebrow">RISK SIGNALS</p><h2>Priority anomalies</h2></div>
+          <span class="pill" id="anomaly-count">0</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Severity</th><th>Identity</th><th>Issue</th><th>Controls</th></tr></thead>
+            <tbody id="anomalies"></tbody>
+          </table>
+        </div>
+      </article>
+      <article class="panel">
+        <div class="panel-title">
+          <div><p class="eyebrow">WHO TO LOOK AT FIRST</p><h2>Riskiest identities</h2></div>
+        </div>
+        <div class="stack" id="top-identities"></div>
+      </article>
+    </section>
+
+    <section class="two-column">
+      <article class="panel">
+        <div class="panel-title">
+          <div><p class="eyebrow">CERTIFICATION</p><h2>Access review campaign</h2></div>
+          <span class="pill" id="campaign-status">--</span>
+        </div>
+        <div id="campaign" class="campaign"></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Reviewer</th><th>Assigned</th><th>Pending</th><th>Revoked</th></tr></thead>
+            <tbody id="reviewers"></tbody>
+          </table>
+        </div>
+      </article>
+      <article class="panel">
+        <div class="panel-title">
+          <div><p class="eyebrow">REGULATORY EXPOSURE</p><h2>ISO 27001 · NIS2 · DORA</h2></div>
+        </div>
+        <div class="stack" id="compliance"></div>
+      </article>
+    </section>
+
+    <section class="two-column">
+      <article class="panel">
+        <div class="panel-title">
+          <div><p class="eyebrow">ACCEPTED RISK</p><h2>Time-bound exceptions</h2></div>
+        </div>
+        <div class="stack" id="exceptions"></div>
+      </article>
+      <article class="panel">
+        <div class="panel-title">
+          <div><p class="eyebrow">EVIDENCE</p><h2>Tamper-evident audit trail</h2></div>
+          <span class="pill" id="chain-status">--</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Event</th><th>Actor</th><th>Details</th><th>Hash</th></tr></thead>
+            <tbody id="audit-events"></tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>AccessGov is an educational portfolio project. Demo data is synthetic. Scores are explainable portfolio metrics, not an industry standard.</footer>
+  <script src="/static/app.js"></script>
+</body>
+</html>
